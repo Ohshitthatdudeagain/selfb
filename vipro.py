@@ -2368,7 +2368,7 @@ def bot(op):
 		gid = vipro.getGroupIdsJoined()
 		if msg.from_ in Creator:
 		    for i in gid:
-			vipro.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\")
+			vipro.sendText(i,"Hope y'all have a great day.")
 		    vipro.sendText(msg.to,"Success BC BosQ")
 		else:
 		    vipro.sendText(msg.to,"Admin")

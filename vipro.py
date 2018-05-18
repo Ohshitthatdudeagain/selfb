@@ -88,7 +88,7 @@ mediaMessage ="""
 ╠➩〘lyrics (name of the song)〙
 ╠➩〘music (Name of the song)〙
 ╠➩〘ig (UsernameInstagram)〙
-╠➩〘Checking (Username Instagram)〙
+╠➩〘Checkig (Username Instagram)〙
 ╠➩〘apakah Text (Kerang Ajaib)〙
 ╠➩〘kapan Text (Kerang Ajaib)〙
 ╠➩〘hari Text (Kerang Ajaib)〙
@@ -633,7 +633,7 @@ def bot(op):
                         vipro.leaveGroup(op.param1)                        
 		    else:
                         vipro.acceptGroupInvitation(op.param1)
-			vipro.sendText(op.param1,"☆type ☞Help☜ for help☆\n☆ Use it wisely..I guess ^_^ ☆")
+			vipro.sendText(op.param1,"Here we go again")
                         		    
  
 	    if mid in op.param3:
@@ -643,7 +643,7 @@ def bot(op):
                         vipro.rejectGroupInvitation(op.param1)
 		    else:
                         vipro.acceptGroupInvitation(op.param1)
-			vipro.sendText(op.param1,"☆type ☞Help☜ for help☆\n☆ Use it wisely..I guess ^_^ ☆")
+			vipro.sendText(op.param1,"Hi,new to line. Send stickers k thnx.")
 	    else:
                 if wait["AutoCancel"] == True:
 		    if op.param3 in Bots:
@@ -870,7 +870,7 @@ def bot(op):
                  if wait["detectMention"] == True:
                      contact = vipro.getContact(msg.from_)
                      cName = contact.displayName
-                     balas = ["Dont Tag!! jk. tag me if you love me",cName + " what do you need?",cName + " Gift me stickers. My tags don't come for free","eww go away", cName + " y doe?","I'm gonna get you back" + cName, "I'm alive..Thanks for showing interest in me " + cName, "Wut? " + cName + "?", "what? " + cName + "?","Woii Go away " + cName + " Bitch you be missing me and shit !"]
+                     balas = ["Dont Tag!! jk. tag me if you love me",cName + " what do you need?",cName + " Gift me stickers. My tags don't come for free",cName + "eww go away", cName + " y doe?","I'm gonna get you back" + cName "I'm alive..Thanks for showing interest in me " + cName "Wut? " + cName + "?", "what? " + cName + "Go away..kthnx " + cName + " Bitch you be missing me and shit !"]
                      ret_ = random.choice(balas)
                      name = re.findall(r'@(\w+)', msg.text)
                      mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -983,12 +983,12 @@ def bot(op):
                 elif wait["dblacklist"] == True:
                     if msg.contentMetadata["mid"] in wait["blacklist"]:
                         del wait["blacklist"][msg.contentMetadata["mid"]]
-                        vipro.sendText(msg.to,"Terhapus")
+                        vipro.sendText(msg.to,"Deleted")
                         wait["dblacklist"] = False
 
                     else:
                         wait["dblacklist"] = False
-                        vipro.sendText(msg.to,"Tidak Ada Black List")
+                        vipro.sendText(msg.to,"No blacklist")
             
                     
  
@@ -1046,7 +1046,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': tjia}
                 vipro.sendMessage(msg)
-		vipro.sendText(msg.to,"Itu Majikan Kami (^_^)")
+		vipro.sendText(msg.to,"Issa me Buttlord (^_^)")
 
  
 
@@ -1056,7 +1056,7 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': gCreator}
                 vipro.sendMessage(msg)
-		vipro.sendText(msg.to,"Itu Yang Buat Grup Ini")
+		vipro.sendText(msg.to,"This amazing hooman made this.")
  
 
                 
@@ -1555,22 +1555,22 @@ def bot(op):
 
 
             elif msg.text in ["Notif on"]:
-                if wait["Sambutan"] == True:
+                if wait["greetings"] == True:
                     if wait["lang"] == "JP":
-                        vipro.sendText(msg.to,"Sambutan Di Aktifkanヾ(*´∀｀*)ﾉ")
+                        vipro.sendText(msg.to,"Greetings have been activated(*´∀｀*)ﾉ")
                 else:
-                    wait["Sambutan"] = True
+                    wait["Greetings"] = True
                     if wait["lang"] == "JP":
-                        vipro.sendText(msg.to,"Sudah Onヽ(´▽｀)/")
+                        vipro.sendText(msg.to,"Greetings Onヽ(´▽｀)/")
 
             elif msg.text in ["Notif off"]:
-                if wait["Sambutan"] == False:
+                if wait["Greetings"] == False:
                     if wait["lang"] == "JP":
-                        vipro.sendText(msg.to,"Sambutan Di Nonaktifkan(　＾∇＾)")
+                        vipro.sendText(msg.to,"Greetings have been turned off(　＾∇＾)")
                 else:
                     wait["Sambutan"] = False
                     if wait["lang"] == "JP":
-                        vipro.sendText(msg.to,"Sudah Off(p′︵‵。)")
+                        vipro.sendText(msg.to,"Greetings Off(p′︵‵。)")
                         
                         
             elif "Sider on" in msg.text:

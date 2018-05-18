@@ -870,7 +870,7 @@ def bot(op):
                  if wait["detectMention"] == True:
                      contact = vipro.getContact(msg.from_)
                      cName = contact.displayName
-                     balas = ["Dont Tag!! jk. tag me if you love me",cName + "what do you need?",cName + " Gift me stickers. My tags don't come for free" ,cName + "eww go away",cName + " y doe?","I'm gonna get you back", cName "I'm alive..Thanks for showing interest in me ", cName "Wut? ",cName + "what? " + cName + "Go away..kthnx " + cName " Bitch you be missing me and shit !"]
+                     balas = ["Dont Tag!! Unless you love me. Then you cool. 🙈",cName + " Must be really important that you tagged me instead of pms -.-",cName + " Hi, I'm alive thankyou for tagging me. Send stickers. k bye.", cName + " Bruh you tagged me, right?","Shit better be amazing else ima cut a bread and make myself a sandwich to hear all your bullshit." + cName, "New phone, who dis? " + cName, "Thankyou for tagging, the person you're trying to tag is lowkey dead just pm him his rip wishes." + cName + "Oh", "ily " + cName + "what","do you need " + cName + " Go away before I pull out my pet bee"]
                      ret_ = random.choice(balas)
                      name = re.findall(r'@(\w+)', msg.text)
                      mention = ast.literal_eval(msg.contentMetadata['MENTION'])

@@ -861,7 +861,7 @@ def bot(op):
                      mention = ast.literal_eval(msg.contentMetadata['MENTION'])
                      mentionees = mention['MENTIONEES']
                      for mention in mentionees:
-                           if mention['M'] in Bots
+                           if mention['M'] in Bots:
                                   vipro.sendText(msg.to,ret_)
                                   vipro.kickoutFromGroup(msg.to,[msg.from_])
                                   break                              

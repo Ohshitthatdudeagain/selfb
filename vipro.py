@@ -82,22 +82,22 @@ mediaMessage ="""
 ╠➩〘Giftbycontact〙
 ╠➩〘Gif gore〙
 ╠➩〘Google (Text)〙
-╠➩〘Playstore NamaApp〙
+╠➩〘Playstore (Name of the app)
 ╠➩〘Fancytext Text〙
-╠➩〘music Judul-Penyanyi〙
-╠➩〘lirik Judul-Penyanyi〙
-╠➩〘musrik Judul-Penyanyi〙
-╠➩〘ig UrsnameInstagram〙
-╠➩〘Checkig UrsnameInstagram〙
+╠➩〘music (name of the song)〙
+╠➩〘lyrics (name of the song)〙
+╠➩〘music (Name of the song)〙
+╠➩〘ig (UsernameInstagram)〙
+╠➩〘Checking (Username Instagram)〙
 ╠➩〘apakah Text (Kerang Ajaib)〙
 ╠➩〘kapan Text (Kerang Ajaib)〙
 ╠➩〘hari Text (Kerang Ajaib)〙
 ╠➩〘berapa Text (Kerang Ajaib)〙
-╠➩〘berapakah Text〙
-╠➩〘Youtube Judul Video〙
-╠➩〘Youtubevideo Judul Video〙
-╠➩〘Youtubesearch:0 Judul Video〙
-╠➩〘Image name〙
+╠➩〘what is (text)〙
+╠➩〘Youtube (Title of the video)〙
+╠➩〘Youtubevideo (Title of the video)〙
+╠➩〘Youtubesearch:0 (Title of the video)〙
+╠➩〘Image (name)〙
 ╠➩〘Say Text〙
 ╠➩〘Say-en Text〙
 ╠➩〘Say-jp Text〙
@@ -120,9 +120,9 @@ groupMessage ="""
 ╠➩〘Welcome〙
 ╠➩〘Say welcome〙
 ╠➩〘Invite creator〙
-╠➩〘Setview/Cctv〙
-╠➩〘Viewseen/Ciduk〙
-╠➩〘Gn: (NamaGroup)〙
+╠➩〘Setview/lurkon)〙
+╠➩〘Viewseen/lurkoff)〙
+╠➩〘Gn: (Groupname)〙
 ╠➩〘Tag all〙
 ╠➩〘lurk on/off〙
 ╠➩〘lurkers〙
@@ -173,8 +173,8 @@ creatorMessage ="""
 ╠➩〘Crash〙
 ╠➩〘Kickall〙
 ╠➩〘Bc: (Text)〙
-╠➩〘Join group: (NamaGroup〙
-╠➩〘Leave group: (NamaGroup〙
+╠➩〘Join group: (Group name)〙
+╠➩〘Leave group: (Group name)〙
 ╠➩〘Leave all group〙
 ╠➩〘Tag on/off〙
 ╠➩〘Bot restart〙
@@ -228,7 +228,7 @@ adminMessage ="""
 
 helpMessage ="""
 ╔═════════════════════════
-║              ☆☞ H E L P ☜☆
+║          ☆☞ H E L P ☜☆
 ╠═════════════════════════
 ╠➩〘Help self〙
 ╠➩〘Help bot〙
@@ -884,7 +884,7 @@ def bot(op):
                  if wait["detectMention2"] == True:          
                     contact = vipro.getContact(msg.from_)
                     cName = contact.displayName
-                    balas = ["","PM me if you wanna talk.","Woii " + cName + " I might be sleeping or busy idk. pm me."]
+                    balas = ["","PM me if you wanna talk.","leave me alone" + cName + " I might be sleeping or busy idk. pm me."]
                     ret_ = random.choice(balas)
                     name = re.findall(r'@(\w+)', msg.text)
                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -1119,7 +1119,7 @@ def bot(op):
                     else:
                         for target in targets:
                             try:
-                                vipro.sendText(msg.to,"Gift Sudah Terkirim!")
+                                vipro.sendText(msg.to,"You're welcome")
                                 msg.contentType = 9
                                 msg.contentMetadata= {'PRDTYPE': 'STICKER',
                                                          'STKVER': '1',
@@ -1172,7 +1172,7 @@ def bot(op):
                      targets = []
                      for s in groups.members:
                          if _name in s.displayName:
-                             vipro.sendText(msg.to, _name + " Berada DiGrup Ini")
+                             vipro.sendText(msg.to, _name + "Display name")
                          else:
                              targets.append(invite)
                      if targets == []:
@@ -1956,7 +1956,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["galau"]:
+            elif msg.text.lower() in ["cry"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '9',
                                     'STKPKGID': '1',
@@ -1964,7 +1964,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["you","kau","kamu"]:
+            elif msg.text.lower() in ["you","fuck you"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '7',
                                     'STKPKGID': '1',
@@ -1972,7 +1972,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["marah","hadeuh","hadeh"]:
+            elif msg.text.lower() in ["mad","angry","arghhh"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '6',
                                     'STKPKGID': '1',
@@ -1980,7 +1980,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["please","pliss","mohon","tolong"]:
+            elif msg.text.lower() in ["please","Please","plsssss","pls"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '4',
                                     'STKPKGID': '1',
@@ -1988,7 +1988,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["haa","haaa","kaget"]:
+            elif msg.text.lower() in ["wow","shocked","wtf"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '3',
                                     'STKPKGID': '1',
@@ -1996,7 +1996,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["lucu","ngakak","lol"]:
+            elif msg.text.lower() in ["haha","hahahaha","lol"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '110',
                                     'STKPKGID': '1',
@@ -2004,7 +2004,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["hmm","hmmm"]:
+            elif msg.text.lower() in ["hmmmm","hmmm","really?"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '101',
                                     'STKPKGID': '1',
@@ -2012,7 +2012,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["tidur"]:
+            elif msg.text.lower() in ["sleepy","tired"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '1',
                                     'STKPKGID': '1',
@@ -2020,7 +2020,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["gemes"]:
+            elif msg.text.lower() in ["yes","yess"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '2',
                                     'STKPKGID': '1',
@@ -2028,7 +2028,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["cantik","imut"]:
+            elif msg.text.lower() in ["you're pretty","make me"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '5',
                                     'STKPKGID': '1',
@@ -2036,7 +2036,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["nyanyi","lalala"]:
+            elif msg.text.lower() in ["sing","let's sing"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '11',
                                     'STKPKGID': '1',
@@ -2044,7 +2044,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["gugup"]:
+            elif msg.text.lower() in ["wtf","whaaa?"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '8',
                                     'STKPKGID': '1',
@@ -2060,7 +2060,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["mantab","mantap","nice","keren"]:
+            elif msg.text.lower() in ["great","nice"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '14',
                                     'STKPKGID': '1',
@@ -2068,7 +2068,7 @@ def bot(op):
                 msg.text = None
                 vipro.sendMessage(msg)
 
-            elif msg.text.lower() in ["ngejek"]:
+            elif msg.text.lower() in ["sorry"]:
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '15',
                                     'STKPKGID': '1',
@@ -2215,17 +2215,17 @@ def bot(op):
                  if jml > 500:
                      print "Terlalu Banyak Men 500+"
                  cnt = Message()
-                 cnt.text = "Jumlah:\n" + str(jml) +  " Members"
+                 cnt.text = "Sorry .-. you'll survive.:\n" + str(jml) +  " Members"
                  cnt.to = msg.to
                  vipro.sendMessage(cnt)                 
 
 
-            elif msg.text in ["Setview","Setpoint","Cctv"]:
+            elif msg.text in ["Setview","Lurkon","Cctv","Lurk on","Lurk initiated"]:
                 subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
-                vipro.sendText(msg.to, "☆Checkpoint Checked☆")
+                vipro.sendText(msg.to, "Lurkers get ready to be called out")
                 print "Setview"
 
-            elif msg.text in ["Viewseen","Check","Ciduk","Cyduk"]:
+            elif msg.text in ["Lurkstop","Lurk stop","Lurk denied"]:
 	        lurkGroup = ""
 	        dataResult, timeSeen, contacts, userList, timelist, recheckData = [], [], [], [], [], []
                 with open('dataSeen/'+msg.to+'.txt','r') as rr:
@@ -2253,14 +2253,14 @@ def bot(op):
                         dataResult.append(contactId[v].displayName + ' ('+timeSeen[v]+')')
                         pass
                     if len(dataResult) > 0:
-                        tukang = "╔═════════════════════════\n║         ☆☞ LIST VIEWERS ☜☆\n╠═════════════════════════\n╠➩"
+                        tukang = "╔═════════════════════════\n║  ☆☞ Hall of Lurkers ☜☆\n╠═════════════════════════\n╠➩"
                         grp = '\n╠➩ '.join(str(f) for f in dataResult)
                         total = '\n╠═════════════════════════\n╠➩ Total %i Viewers (%s)' % (len(dataResult), datetime.now().strftime('%H:%M:%S')) + "\n╚═════════════════════════"
                         vipro.sendText(msg.to, "%s %s %s" % (tukang, grp, total))
                         subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
-                        vipro.sendText(msg.to, "☆Auto Checkpoint☆")                        
+                        vipro.sendText(msg.to, "☆Auto ☆")                        
                     else:
-                        vipro.sendText(msg.to, "☆Belum Ada Viewers☆")
+                        vipro.sendText(msg.to, "☆No lurkers, people are dead af.☆")
                     print "Viewseen"
 
 
@@ -2278,7 +2278,7 @@ def bot(op):
 		if msg.from_ in admin:	 	        
 		    jml = msg.text.replace("Set member: ","")
 		    wait["Members"] = int(jml)
-		    vipro.sendText(msg.to, "Jumlah minimal member telah di set : "+jml)
+		    vipro.sendText(msg.to, "added to the list"+jml)
 
 	    elif "Add all" in msg.text:
 		    thisgroup = vipro.getGroups([msg.to])
@@ -2296,7 +2296,7 @@ def bot(op):
 
             elif msg.text in ["Auto like"]:
                 wait["likeOn"] = True
-                vipro.sendText(msg.to,"Shere Post Kamu Yang Mau Di Like!")                
+                vipro.sendText(msg.to,"Share the post to like")                
 
 
             elif msg.text in ["Steal contact"]:
@@ -2318,7 +2318,7 @@ def bot(op):
                 
             elif msg.text in ["Bot off"]:
                 wait["Bot"] = False
-                vipro.sendText(msg.to,"Bot Sudah Di Nonaktifkan.")  
+                vipro.sendText(msg.to,"Bot Deactivated.")  
 
 	    elif "Recover" in msg.text:
 		thisgroup = vipro.getGroups([msg.to])
@@ -2329,10 +2329,10 @@ def bot(op):
 
 
 
-            elif ("Gn: " in msg.text):
+            elif ("Gn" in msg.text):
                 if msg.toType == 2:
                     X = vipro.getGroup(msg.to)
-                    X.name = msg.text.replace("Gn: ","")
+                    X.name = msg.text.replace("take care ","")
                     vipro.updateGroup(X)
                 else:
                     vipro.sendText(msg.to,"It can't be used besides the group.")
@@ -2349,13 +2349,13 @@ def bot(op):
                 vipro.findAndAddContactsByMid(midd)
                 vipro.inviteIntoGroup(msg.to,[midd])
 
-            elif "Invite creator" in msg.text:
-                midd = "uda936836a9869eb86ec8ab992a4e8979"
+            elif "Invite crceator" in msg.text:
+                midd = "ufba84c406c3009a8909b34d96da7352a"
                 vipro.inviteIntoGroup(msg.to,[midd])
 
             elif msg.text in ["Welcome","welcome","Welkam","welkam","Wc","wc"]:
                 gs = vipro.getGroup(msg.to)
-                vipro.sendText(msg.to,"Selamat Datang Di "+ gs.name)
+                vipro.sendText(msg.to,"Welcome to the group "+ gs.name)
                 msg.contentType = 7
                 msg.contentMetadata={'STKID': '247',
                                     'STKPKGID': '3',
@@ -2368,10 +2368,10 @@ def bot(op):
 		gid = vipro.getGroupIdsJoined()
 		if msg.from_ in Creator:
 		    for i in gid:
-			vipro.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\nContact Me : line.me/ti/p/~nad_nad.")
+			vipro.sendText(i,"=======[BROADCAST]=======\n\n"+bc+"\n\")
 		    vipro.sendText(msg.to,"Success BC BosQ")
 		else:
-		    vipro.sendText(msg.to,"Khusus Admin")
+		    vipro.sendText(msg.to,"Admin")
 
             elif msg.text in ["Cancel"]:
                 gid = vipro.getGroupIdsInvited()
@@ -2405,8 +2405,8 @@ def bot(op):
 		    vipro.leaveGroup(msg.to)		    
 		    
 
-            elif msg.text in ["Absen"]:
-		vipro.sendText(msg.to,"Hadir!!")
+            elif msg.text in ["bye bye"]:
+		vipro.sendText(msg.to,"invite back")
 
 
             elif msg.text.lower() in ["respon"]:
@@ -2499,7 +2499,7 @@ def bot(op):
             elif msg.text.lower() == 'clear ban':
                 if msg.from_ in admin:
                     wait["blacklist"] = {}
-                    vipro.sendText(msg.to,"ヽ( ^ω^)ﾉ└ ❉Unbanned All Success❉ ┐") 
+                    vipro.sendText(msg.to,"ヽ( ^ω^)ﾉ└ Unbanned All Success ┐") 
 
  
             elif msg.text in ["Kill ban"]:
@@ -2515,9 +2515,9 @@ def bot(op):
                             return
                         for jj in matched_list:
                             vipro.kickoutFromGroup(msg.to,[jj])
-                        vipro.sendText(msg.to,"Blacklist emang pantas tuk di usir")
+                        vipro.sendText(msg.to,"User is in the blacklist")
 		else:
-		    vipro.sendText(msg.to, "Khusus creator")
+		    vipro.sendText(msg.to, "creator")
  
             elif msg.text in ["Kill"]:
                     if msg.toType == 2:
@@ -2544,7 +2544,7 @@ def bot(op):
                         print "Kick all member"
                         _name = msg.text.replace("Kickall","")
                         gs = vipro.getGroup(msg.to)
-                        vipro.sendText(msg.to,"Dadaaah~")
+                        vipro.sendText(msg.to,"Allahu Akbar")
                         targets = []
                         for g in gs.members:
                             if _name in g.displayName:
@@ -2614,8 +2614,8 @@ def bot(op):
                     vipro.sendText(msg.to, str(e))
 
  
-	    elif "musik " in msg.text:
-					songname = msg.text.replace("musik ","")
+	    elif "music " in msg.text:
+					songname = msg.text.replace("music ","Music")
 					params = {"songname": songname}
 					r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
 					data = r.text
@@ -2623,13 +2623,13 @@ def bot(op):
 					for song in data:
 						abc = song[3].replace('https://','http://')
 						vipro.sendText(msg.to, "Title : " + song[0] + "\nLength : " + song[1] + "\nLink download : " + song[4])
-						vipro.sendText(msg.to, "Lagu " + song[0] + "\nSedang Di Prosses... Tunggu Sebentar ^_^ ")
+						vipro.sendText(msg.to, "Lagu " + song[0] + "\nGive me a min...It's processing ^_^ ")
 						vipro.sendAudioWithURL(msg.to,abc)
-						vipro.sendText(msg.to, "Selamat Mendengarkan Lagu " + song[0])
+						vipro.sendText(msg.to, "Happy Listening " + song[0])
 	
-            elif 'lirik ' in msg.text.lower():
+            elif "lyrics" in msg.text.lower():
                 try:
-                    songname = msg.text.lower().replace('lirik ','')
+                    songname = msg.text.lower().replace('lyrics ','')
                     params = {'songname': songname}
                     r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
                     data = r.text
@@ -2643,8 +2643,8 @@ def bot(op):
                 except Exception as wak:
                         vipro.sendText(msg.to, str(wak))
                         
-	    elif "musrik " in msg.text:
-					songname = msg.text.replace("musrik ","")
+	    elif "music " in msg.text:
+					songname = msg.text.replace("music ","")
 					params = {"songname": songname}
 					r = requests.get('http://ide.fdlrcn.com/workspace/yumi-apis/joox?' + urllib.urlencode(params))
 					data = r.text
@@ -2655,10 +2655,10 @@ def bot(op):
 						hasil += song[0]
 						hasil += ')\n\n'
 						hasil += song[5]
-						vipro.sendText(msg.to, "Lagu " + song[0] + "\nSedang Di Prosses... Tunggu Sebentar ^_^ ")
+						vipro.sendText(msg.to, "Lagu " + song[0] + "\nin process...Give me a min ^_^ ")
 						vipro.sendAudioWithURL(msg.to,abc)
 						vipro.sendText(msg.to, "Title : " + song[0] + "\nLength : " + song[1] + "\nLink download : " + song[4] +"\n\n" + hasil)
-						vipro.sendText(msg.to, "Selamat Mendengarkan Lagu " + song[0])
+						vipro.sendText(msg.to, "Have fun " + song[0])
              
             
             
@@ -2759,7 +2759,7 @@ def bot(op):
                                 vipro.sendText(msg.to,"Upload image failed.")
 
             elif msg.text.lower() in ["pap owner","pap creator"]:
-                                link = ["http://dl.profile.line-cdn.net/0hFR-rB8h-GX0QCzWZMOZmKixOFxBnJR81aG9eSTUNREhtOVYqJWgFSWYDR05vOwp7K2sCGTELRUVo"]
+                                link = ["buttlord"]
                                 pilih = random.choice(link)
                                 vipro.sendImageWithURL(msg.to,pilih)
 
@@ -2891,7 +2891,7 @@ def bot(op):
 
             elif "Say welcome" in msg.text:
                 gs = vipro.getGroup(msg.to)
-                say = msg.text.replace("Say welcome","Selamat Datang Di "+ gs.name)
+                say = msg.text.replace("welcome","Welcome to "+ gs.name)
                 lang = 'id'
                 tts = gTTS(text=say, lang=lang)
                 tts.save("hasil.mp3")
@@ -2933,7 +2933,7 @@ def bot(op):
             elif "lurk off" == msg.text.lower():
                #if msg.from_ in admin:
                 if msg.to not in wait2['readPoint']:
-                    vipro.sendText(msg.to,"Lurking already off")
+                    vipro.sendText(msg.to,"Lurk turned off")
                 else:
                     try:
                             del wait2['readPoint'][msg.to]
@@ -2979,7 +2979,7 @@ def bot(op):
                         msg.contentMetadata = lol
                         try:
                           vipro.sendMessage(msg)
-                          vipro.sendText(msg.to, "Jika sudah lihat sider please\ntulis lurk on lagi kak  (｀・ω・´)\n \n"  +  datetime.now().strftime('%H:%M:%S'))
+                          vipro.sendText(msg.to, "Lurking started  (｀・ω・´)\n \n"  +  datetime.now().strftime('%H:%M:%S'))
                         except Exception as error:
                               print error
                         pass
@@ -2989,7 +2989,7 @@ def bot(op):
 
 
             elif msg.text.lower() in ["hi","hai","halo","hallo"]:
-                    beb = "Hi Sayang 😘 " +vipro.getContact(msg.from_).displayName + " 􀸂􀆇starry heart􏿿"
+                    beb = "Hi " +vipro.getContact(msg.from_).displayName + " 􀸂􀆇starry heart􏿿"
                     vipro.sendText(msg.to,beb)
 
 
@@ -3090,12 +3090,12 @@ def bot(op):
             elif msg.text in ["Simisimi on","Simisimi:on"]:
                 settings["simiSimi"][msg.to] = True
                 wait["Simi"] = True
-                vipro.sendText(msg.to," Simisimi Di Aktifkan")
+                vipro.sendText(msg.to," Simisimi activated")
                 
             elif msg.text in ["Simisimi off","Simisimi:off"]:
                 settings["simiSimi"][msg.to] = False
                 wait["Simi"] = False
-                vipro.sendText(msg.to,"Simisimi Di Nonaktifkan")
+                vipro.sendText(msg.to,"Simisimi Disabled")
 
  
             elif "Image " in msg.text:
@@ -3338,15 +3338,15 @@ def bot(op):
                 usia = data["data"]["usia"]
                 ultah = data["data"]["ultah"]
                 zodiak = data["data"]["zodiak"]
-                vipro.sendText(msg.to,"========== I N F O R M A S I ==========\n"+"Date Of Birth : "+lahir+"\nAge : "+usia+"\nUltah : "+ultah+"\nZodiak : "+zodiak+"\n========== I N F O R M A S I ==========")
+                vipro.sendText(msg.to,"========== I N F O R M A I ==========\n"+"Date Of Birth : "+lahir+"\nAge : "+usia+"\nUltah : "+ultah+"\nZodiak : "+zodiak+"\n========== I N F O R M A S I ==========")
                 
    
-            elif msg.text in ["Kalender","Time","Waktu"]:
+            elif msg.text in ["Calender","Time","Waktu"]:
                 timeNow = datetime.now()
                 timeHours = datetime.strftime(timeNow,"(%H:%M)")
                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
-                hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"]
-                bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]
+                hari = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"]
+                bulan = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
                 inihari = datetime.today()
                 hr = inihari.strftime('%A')
                 bln = inihari.strftime('%m')
@@ -3394,16 +3394,16 @@ def bot(op):
                             vipro.findAndAddContactsByMid(msg.from_)
                             vipro.inviteIntoGroup(gid,[msg.from_])
                         except:
-                            vipro.sendText(msg.to,"Mungkin Saya Tidak Di Dalaam Grup Itu")
+                            vipro.sendText(msg.to,"Not in the group")
 
 
             elif msg.text in ["Glist"]:
-                vipro.sendText(msg.to, "Tunggu Sebentar. . .")                    
+                vipro.sendText(msg.to, "Wait a min...")          
                 gid = vipro.getGroupIdsJoined()
                 h = ""
                 for i in gid:
                     h += "╠➩" + "%s\n" % (vipro.getGroup(i).name +" ~> ["+str(len(vipro.getGroup(i).members))+"]")
-                vipro.sendText(msg.to,"╔═════════════════════════\n║          ☆☞ LIST GROUPS☜☆\n╠═════════════════════════\n" + h + "╠═════════════════════════" + "\n║ Total Groups =" +" ["+str(len(gid))+"]\n╚═════════════════════════")
+                vipro.sendText(msg.to,"╔═════════════════════════\n║          ☞ LIST GROUPS☜\n╠═════════════════════════\n" + h + "╠═════════════════════════" + "\n║ Total Groups =" +" ["+str(len(gid))+"]\n╚═════════════════════════")
 
             elif msg.text in ["Glistmid"]:   
                 gruplist = vipro.getGroupIdsJoined()
@@ -3421,16 +3421,16 @@ def bot(op):
             elif "Google: " in msg.text:
                     a = msg.text.replace("Google: ","")
                     b = urllib.quote(a)
-                    vipro.sendText(msg.to,"Sedang Mencari...")
+                    vipro.sendText(msg.to,"Searching")
                     vipro.sendText(msg.to, "https://www.google.com/" + b)
-                    vipro.sendText(msg.to,"Itu Dia Linknya. . .")     
+                    vipro.sendText(msg.to,"There ya go.")     
 
 
             elif "Details group: " in msg.text:
                 if msg.from_ in admin:
                     gid = msg.text.replace("Details group: ","")
                     if gid in [""," "]:
-                        vipro.sendText(msg.to,"Grup id tidak valid")
+                        vipro.sendText(msg.to,"Group ID is not valid")
                     else:
                         try:
                             groups = vipro.getGroup(gid)
@@ -3461,9 +3461,9 @@ def bot(op):
                         else:
                             break
                     if gid is not None:
-                        vipro.sendText(msg.to,"Berhasil tolak undangan dari grup " + gid.name)
+                        vipro.sendText(msg.to,"Group invite has been rejected " + gid.name)
                     else:
-                        vipro.sendText(msg.to,"Grup tidak ditemukan")
+                        vipro.sendText(msg.to,"Group not found")
             
             elif msg.text in ["Acc invite"]:
                 if msg.from_ in admin:
@@ -3477,9 +3477,9 @@ def bot(op):
                         else:
                             break
                     if gid is not None:
-                        vipro.sendText(msg.to,"Berhasil terima semua undangan dari grup :\n" + _list)
+                        vipro.sendText(msg.to,"Accepted all the group invites :\n" + _list)
                     else:
-                        vipro.sendText(msg.to,"Tidak ada grup yang tertunda saat ini")  
+                        vipro.sendText(msg.to,"No pending group invites atm.")  
 
 
             elif "Gif gore" in msg.text:
@@ -3498,7 +3498,7 @@ def bot(op):
                 for target in targets:
                     try:
                         mimic["target"][target] = True
-                        vipro.sendText(msg.to,"Target ditambahkan!")
+                        vipro.sendText(msg.to,"Target added!")
                         break
                     except:
                         vipro.sendText(msg.to,"Fail !")
@@ -3513,7 +3513,7 @@ def bot(op):
                 for target in targets:
                     try:
                         del mimic["target"][target]
-                        vipro.sendText(msg.to,"Target dihapuskan!")
+                        vipro.sendText(msg.to,"Target removed!")
                         break
                     except:
                         vipro.sendText(msg.to,"Fail !")
@@ -3547,13 +3547,13 @@ def bot(op):
                         mimic["status"] = True
                         vipro.sendText(msg.to,"Reply Message on")
                     else:
-                        vipro.sendText(msg.to,"Sudah on")
+                        vipro.sendText(msg.to,"Mimic has been activated")
                 elif cmd == "off":
                     if mimic["status"] == True:
                         mimic["status"] = False
                         vipro.sendText(msg.to,"Reply Message off")
                     else:
-                        vipro.sendText(msg.to,"Sudah off")
+                        vipro.sendText(msg.to,"Mimic deactivated")
 
 
 

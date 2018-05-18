@@ -156,7 +156,7 @@ setMessage ="""
 ╠➩〘Mimic on/off〙
 ╠➩〘Url on/off〙
 ╠➩〘Alwaysread on/off〙
-╠➩〘Sider on/off〙
+╠➩〘Stalking on/off〙
 ╠➩〘Contact on/off〙
 ╠➩〘Sticker on〙
 ╠➩〘Simisimi on/off〙
@@ -308,7 +308,7 @@ settings = {
     }
     
 cctv = {
-    "cyduk":{},
+    "lurkon":{},
     "point":{},
     "sidermem":{}
 }    
@@ -588,15 +588,15 @@ def bot(op):
                                 if " " in Name:
                                     nick = Name.split(' ')
                                     if len(nick) == 2:
-                                        vipro.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\ny doe?")
+                                        vipro.sendText(op.param1, "I'm judging you so hard" + "☞ " + Name + " ☜")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                     else:
-                                        vipro.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\nI'm judging you")
+                                        vipro.sendText(op.param1,"☞ " + Name + " ☜" + "\nI'm judging you")
                                         time.sleep(0.2)
                                         summon(op.param1,[op.param2])
                                 else:
-                                    vipro.sendText(op.param1, "Haii " + "☞ " + Name + " ☜" + "\ny doe? ")
+                                    vipro.sendText(op.param1, "I know that you love me and all but " + "☞ " + Name + " ☜" + "\ny doe? ")
                                     time.sleep(0.2)
                                     summon(op.param1,[op.param2])
                         else:
@@ -1489,7 +1489,7 @@ def bot(op):
 	        wait["Qr"] = True
 	    	vipro.sendText(msg.to,"QR Protect Activated")
 	     else:
-		    vipro.sendText(msg.to,"Khusus Admin")	    	
+		    vipro.sendText(msg.to," Admin")	    	
 
 	    elif "Qr off" in msg.text:
 	     if msg.from_ in admin:	        
@@ -1568,37 +1568,37 @@ def bot(op):
                     if wait["lang"] == "JP":
                         vipro.sendText(msg.to,"Greetings have been turned off(　＾∇＾)")
                 else:
-                    wait["Sambutan"] = False
+                    wait["Greetings"] = False
                     if wait["lang"] == "JP":
                         vipro.sendText(msg.to,"Greetings Off(p′︵‵。)")
                         
                         
-            elif "Sider on" in msg.text:
+            elif "Stalking on" in msg.text:
                 try:
                     del cctv['point'][msg.to]
                     del cctv['sidermem'][msg.to]
-                    del cctv['cyduk'][msg.to]
+                    del cctv['lurkon'][msg.to]
                 except:
                     pass
                 cctv['point'][msg.to] = msg.id
                 cctv['sidermem'][msg.to] = ""
-                cctv['cyduk'][msg.to]=True
+                cctv['lurkon'][msg.to]=True
                 wait["Sider"] = True
-                vipro.sendText(msg.to,"Siap On Cek Sider")
+                vipro.sendText(msg.to,"Ready to stalk people")
                 
-            elif "Sider off" in msg.text:
+            elif "Stalking off" in msg.text:
                 if msg.to in cctv['point']:
-                    cctv['cyduk'][msg.to]=False
+                    cctv['lurkoff'][msg.to]=False
                     wait["Sider"] = False
-                    vipro.sendText(msg.to, "Cek Sider Off")
+                    vipro.sendText(msg.to, "Stalking people has been turned off.")
                 else:
-                    vipro.sendText(msg.to, "Heh Belom Di Set")                         
+                    vipro.sendText(msg.to, "Stalking people not set yet")                         
 
 
             elif msg.text in ["Status"]:
                 md = ""
-		if wait["Sambutan"] == True: md+="╠➩✔️ Sambutan : On\n"
-		else:md+="╠➩❌ Sambutan : Off\n"
+		if wait["Greetings"] == True: md+="╠➩✔️ Greetings : On\n"
+		else:md+="╠➩❌ Greetings : Off\n"
 		if wait["AutoJoin"] == True: md+="╠➩✔️ Auto Join : On\n"
                 else: md +="╠➩❌ Auto Join : Off\n"
 		if wait["AutoJoinCancel"] == True: md+="╠➩✔️ Auto Join Cancel : On\n"
@@ -1623,7 +1623,7 @@ def bot(op):
 		else:md+="╠➩❌ Auto Respon3 : Off\n"			
 		if wait["kickMention"] == True: md+="╠➩✔️ Auto Respon Kick : On\n"
 		else:md+="╠➩❌ Auto Respon Kick : Off\n"				
-		if wait["Sider"] == True: md+="╠➩✔️ Auto Sider : On\n"
+		if wait["Stalking"] == True: md+="╠➩✔️ Auto Sider : On\n"
 		else:md+="╠➩❌ Auto Sider: Off\n"	
 		if wait["Simi"] == True: md+="╠➩✔️ Simisimi : On\n"
 		else:md+="╠➩❌ Simisimi: Off\n"		

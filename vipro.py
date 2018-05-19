@@ -1595,7 +1595,7 @@ def bot(op):
                     vipro.sendText(msg.to, "Stalking people not set yet")                         
 
 
-            elif msg.text in ["Status"]:
+            elif msg.text in ["status"]:
                 md = ""
 		if wait["Greetings"] == True: md+="╠➩✔️ Greetings : On\n"
 		else:md+="╠➩❌ Greetings : Off\n"

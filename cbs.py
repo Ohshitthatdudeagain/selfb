@@ -54,8 +54,8 @@ helpMessage ="""
 """
 
 mid = cl.getProfile().mid
-Creator="ud8c4d53f17999c8e029827b67af3b06a"
-admin=[""]
+Creator="ufba84c406c3009a8909b34d96da7352a"
+admin=["ufba84c406c3009a8909b34d96da7352a"]
 
 contact = cl.getProfile()
 profile = cl.getProfile()
